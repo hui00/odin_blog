@@ -1,0 +1,9 @@
+<div>
+  <p> <%= @post.content %>
+    <p class="mt-2 font-thin text-left">
+      <span> <%= @post.author %> - </span>
+      <span>
+        <%= time_ago_in_words(@post.created_at) %>
+      </span>
+    </p>
+  </div>
