@@ -2,9 +2,15 @@
   <h1 class="font-bold text-4xl mb-6 ">Create New Blog Post</h1>
   <%= form_with url: "/articles", model: @post do |form| %>
     <%= form.label :author%> <br>
-    <%= form.text_field :author, placeholder: "author name", class:"mb-6" %> <br>
+    <%= form.text_field :author,
+    # size: 2,
+    minlength: 3,
+    # onchange: "alert('hello')",
+    # :value => 'contact@host.com',
+    required: true,
+    placeholder: "author name", class:"mb-6" %> <br>
     <%= form.label :content%> <br>
-    <%= form.text_area :content, placeholder: "type content...", class: ""  %> <br>
+    <%= form.text_area :content, placeholder: "type content...", class: "",  size: "40x10", minlength: 10, required: true  %> <br>
     <div>
       <%= form.submit "send", class: "bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" %>
     </div>

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
 /*
 
 @layer components {
